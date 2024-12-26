@@ -222,7 +222,7 @@ function App() {
                 carrera="Aprende JavaScript de CERO a EXPERTO"
                 nombre="Udemy"
                 anioComienzo="2024"
-                rutaCertificado="src\assets\pdf\Aprende_JavaScript_de_CERO_a_EXPERTO.jpg"
+                rutaCertificado="src\assets\pdf\Fundamentos_esenciales_de_la_programacion.jpg"
               />
             <Estudios
                 carrera="Fundamentos esenciales de la programación"
