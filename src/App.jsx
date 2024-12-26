@@ -1,11 +1,23 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 
+// Imágenes
+import pfp from './assets/img/pfp.jpg';
+import html from './assets/img/tecnologias/HTML.svg';
+import css from './assets/img/tecnologias/CSS.svg';
+import js from './assets/img/tecnologias/JS.svg';
+import react from './assets/img/tecnologias/REACT.svg';
+import git from './assets/img/tecnologias/GIT.svg';
+import github from './assets/img/tecnologias/GITHUB.svg';
+import domina from './assets/img/empresas/domina_entrega_total_sas_logo.jpg';
+import beautySales from './assets/img/empresas/BeautySales.png';
+import minimercado from './assets/img/proyectos/minimercado.png';
+
 // Componentes
-import Habilidades from "/assets/components/habilidades/habilidades.jsx";
-import Experiencia from "/assets/components/experiencia/experiencia.jsx";
-import Proyectos from "/assets/components/proyectos/proyectos.jsx";
-import Estudios from "/assets/components/estudios/estudios.jsx";
+import Habilidades from "./components/habilidades/habilidades.jsx";
+import Experiencia from "./components/experiencia/experiencia.jsx";
+import Proyectos from "./components/proyectos/proyectos.jsx";
+import Estudios from "./components/estudios/estudios.jsx";
 
 // Iconos
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -83,7 +95,7 @@ function App() {
             </article>
             <article className="img-encabezado">
               <img
-                src="/assets/img/pfp.jpg"
+                src={pfp}
                 alt="Foto de perfil"
                 className="rounded-full w-80"
               />
@@ -104,27 +116,27 @@ function App() {
             <h2 className="text-3xl font-bold mx-auto">Tecnologías</h2>
             <div className="skills flex flex-wrap justify-evenly gap-4 w-[100%]">
               <Habilidades
-                urlImagen="/assets/img/tecnologias/HTML.svg"
+                urlImagen={html}
                 nombre="HTML"
               />
               <Habilidades
-                urlImagen="/assets/img/tecnologias/CSS.svg"
+                urlImagen={css}
                 nombre="CSS"
               />
               <Habilidades
-                urlImagen="/assets/img/tecnologias/JS.svg"
+                urlImagen={js}
                 nombre="JavaScript"
               />
               <Habilidades
-                urlImagen="/assets/img/tecnologias/REACT.svg"
+                urlImagen={react}
                 nombre="React"
               />
               <Habilidades
-                urlImagen="/assets/img/tecnologias/GIT.svg"
+                urlImagen={git}
                 nombre="Git"
               />
               <Habilidades
-                urlImagen="/assets/img/tecnologias/GITHUB.svg"
+                urlImagen={github}
                 nombre="GitHub"
               />
             </div>
@@ -133,7 +145,7 @@ function App() {
             <h2 className="text-3xl font-bold mx-auto">Experiencia</h2>
             <div className="flex flex-col justify-center items-center gap-4 w-[100%]">
               <Experiencia
-                imgEmpresa="/assets/img/empresas/domina_entrega_total_sas_logo.jpg"
+                imgEmpresa={domina}
                 nombreEmpresa="Domina Entrega Total S.A.S"
                 cargo="Aprendiz en practicas"
                 anioComienzo="2024"
@@ -163,7 +175,7 @@ function App() {
                 
               />
               <Experiencia
-                imgEmpresa="/assets/img/empresas/BeautySales.png"
+                imgEmpresa={beautySales}
                 nombreEmpresa="Beauty Sales"
                 cargo="Sistema POS - Freelance"
                 anioComienzo="2024"
@@ -191,7 +203,7 @@ function App() {
             <h2 className="text-3xl font-bold mx-auto">Proyectos</h2>
             <div className="flex flex-wrap items-center gap-4 w-[100%] justify-center">
               <Proyectos
-                imgProyecto="/assets/img/proyectos/minimercado.png"
+                imgProyecto={minimercado}
                 nombreProyecto="Minimercado"
                 descripcion="Este es un proyecto interactivo de Minimercado hecho con que simula una aplicación básica para la selección de productos, cálculo de totales y manejo del pago y cambio del cliente."
                 habilidades={["HTML", "CSS", "JavaScript"]}
@@ -222,49 +234,49 @@ function App() {
                 carrera="Aprende JavaScript de CERO a EXPERTO"
                 nombre="Udemy"
                 anioComienzo="2024"
-                rutaCertificado="/assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
+                rutaCertificado="./assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
               />
             <Estudios
                 carrera="Fundamentos esenciales de la programación"
                 nombre="Linkedin"
                 anioComienzo="2024"
-                rutaCertificado="\assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
+                rutaCertificado="./assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
               />
             <Estudios
                 carrera="Introduction to Data Science"
                 nombre="Cisco Networking Academy"
                 anioComienzo="2024"
-                rutaCertificado="/assets/pdf/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
+                rutaCertificado="./assets/pdf/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
               />
             <Estudios
                 carrera="Python esencial"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="/assets/pdf/Python_esencial.jpg"
+                rutaCertificado="./assets/pdf/Python_esencial.jpg"
               />
             <Estudios
                 carrera="GitHub para programadores"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="/assets/pdf/GitHub_para_programadores.jpg"
+                rutaCertificado="./assets/pdf/GitHub_para_programadores.jpg"
               />
             <Estudios
                 carrera="HTML esencial"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="/assets/pdf/HTML_esencial.jpg"
+                rutaCertificado="./assets/pdf/HTML_esencial.jpg"
               />
             <Estudios
                 carrera="CSS esencial"
                 nombre="Linkedin"
                 anioComienzo="2022"
-                rutaCertificado="/assets/pdf/CSS_esencial.png"
+                rutaCertificado="./assets/pdf/CSS_esencial.png"
               />
               <Estudios
                 carrera="Desarrollo ágil de software"
                 nombre="Linkedin"
                 anioComienzo="2022"
-                rutaCertificado="/assets/pdf/Desarrollo_agil_de_software.png"
+                rutaCertificado="./assets/pdf/Desarrollo_agil_de_software.png"
               />
             </div>
           </section>
