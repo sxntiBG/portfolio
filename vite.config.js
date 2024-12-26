@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import react from '@vitejs/plugin-react'; // Si usas React, ajusta según tu caso
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '/assets': path.resolve(__dirname, 'src/assets'),
+      '/assets': '/src/assets',
     },
   },
 });
