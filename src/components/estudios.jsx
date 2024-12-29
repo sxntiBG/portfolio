@@ -40,8 +40,9 @@ const Estudios = ({
       target="_blank"
       rel="noopener noreferrer"
       className="text-[#a987c9] hover:text-black"
+      download
     >
-      Ver certificado
+      Descargar certificado
     </a>
   </div>
 )}

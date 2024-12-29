@@ -67,7 +67,7 @@ function App() {
               </h1>
               <p className="mt-5 text-lg">🧑🏻‍💻 Desarrollador Front-End</p>
               <div className=" flex gap-4 mt-5 items-center">
-              <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Ver CV</button>
+              <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Descargar CV</button>
               <a
                   href="https://github.com/sxntiBG"
                   target="_blank"
@@ -243,25 +243,25 @@ function App() {
                 carrera="Aprende JavaScript de CERO a EXPERTO"
                 nombre="Udemy"
                 anioComienzo="2024"
-                rutaCertificado="./assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
+                rutaCertificado="./assets/img/certificados/Aprende_Javascript_de_cero_a_experto.jpg"
               />
             <Estudios
                 carrera="Fundamentos esenciales de la programación"
                 nombre="Linkedin"
                 anioComienzo="2024"
-                rutaCertificado="./assets/pdf/Fundamentos_esenciales_de_la_programacion.jpg"
+                rutaCertificado="./assets/img/certificados/Fundamentos_esenciales_de_la_programacion.jpg"
               />
             <Estudios
                 carrera="Introduction to Data Science"
                 nombre="Cisco Networking Academy"
                 anioComienzo="2024"
-                rutaCertificado="./assets/pdf/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
+                rutaCertificado="./assets/img/certificados/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
               />
             <Estudios
                 carrera="Python esencial"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="./assets/pdf/Python_esencial.jpg"
+                rutaCertificado="./assets/img/certificados/Python_esencial.jpg"
               />
               <ToggleContent>
              <div className="flex flex-wrap items-center gap-4 w-full justify-center">
@@ -269,25 +269,25 @@ function App() {
                 carrera="GitHub para programadores"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="./assets/pdf/GitHub_para_programadores.jpg"
+                rutaCertificado="./assets/img/certificados/GitHub_para_programadores.jpg"
               />
             <Estudios
                 carrera="HTML esencial"
                 nombre="Linkedin"
                 anioComienzo="2023"
-                rutaCertificado="./assets/pdf/HTML_esencial.jpg"
+                rutaCertificado="./assets/img/certificados/HTML_esencial.jpg"
               />
             <Estudios
                 carrera="CSS esencial"
                 nombre="Linkedin"
                 anioComienzo="2022"
-                rutaCertificado="./assets/pdf/CSS_esencial.png"
+                rutaCertificado="./assets/img/certificados/CSS_esencial.png"
               />
               <Estudios
                 carrera="Desarrollo ágil de software"
                 nombre="Linkedin"
                 anioComienzo="2022"
-                rutaCertificado="./assets/pdf/Desarrollo_agil_de_software.png"
+                rutaCertificado="./assets/img/certificados/Desarrollo_agil_de_software.png"
               />
              </div>
               </ToggleContent>
@@ -313,7 +313,7 @@ function App() {
                 <SlSocialLinkedin className="w-8 h-8" />
               </a>
             </article>
-            <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Ver CV</button>
+            <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Descargar CV</button>
             <button
               onClick={copyEmail}
               className="hover:text-[#a987c9] focus:outline-none"
