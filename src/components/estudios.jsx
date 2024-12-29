@@ -26,7 +26,7 @@ const Estudios = ({
   };
 
   return (
-    <div className="card flex flex-col justify-center items-start mt-10 bg-white p-6 rounded-xl w-[46.5%] shadow-md transition-shadow duration-300 hover:shadow-lg">
+    <div className="card flex flex-col justify-center items-start mt-10 bg-white p-6 rounded-xl lg:w-[46.5%] sm:w-full shadow-md transition-shadow duration-300 hover:shadow-lg">
       <h2 className="text-xl font-bold mb-2">{carrera}</h2>
       <p className="text-lg font-semibold mb-2 text-[#a987c9]">{nombre}</p>
       <span className="flex justify-start items-center gap-2">

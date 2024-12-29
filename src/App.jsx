@@ -14,22 +14,24 @@ import beautySales from './assets/img/empresas/BeautySales.png';
 import minimercado from './assets/img/proyectos/minimercado.png';
 
 // Componentes
-import Habilidades from "./components/habilidades/habilidades.jsx";
-import Experiencia from "./components/experiencia/experiencia.jsx";
-import Proyectos from "./components/proyectos/proyectos.jsx";
-import Estudios from "./components/estudios/estudios.jsx";
+import Habilidades from "./components/habilidades.jsx";
+import Experiencia from "./components/experiencia.jsx";
+import Proyectos from "./components/proyectos.jsx";
+import Estudios from "./components/estudios.jsx";
+import ToggleContent from "./components/visibilidad.jsx";
 
 // Iconos
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FiGithub } from "react-icons/fi";
 import { FaCheck } from "react-icons/fa6";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { LuDownload } from "react-icons/lu";
 import { HiOutlineMail } from "react-icons/hi";
 
 function App() {
   const [isEmailCopied, setIsEmailCopied] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const copyEmail = () => {
     navigator.clipboard.writeText("zapataospinasantiago8@gmail.com");
@@ -50,13 +52,17 @@ function App() {
     });
   };
 
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible); 
+  };
+
   return (
     <>
       <div className="contenedor  w-[80%] my-20 mx-auto rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0px_6px_15px_rgba(0,0,0,0.3)]">
         <main className="p-12">
-          <section className="encabezado flex justify-between ">
+          <section className="encabezado flex md:flex-row md:justify-between sm:flex-col-reverse sm:items-center sm:justify-center">
             <article className="informacion-encabezado  w-[90%] flex flex-col justify-center items-left">
-              <h1 className="font-bold w-[100%] text-4xl">
+              <h1 className="font-bold w-full text-4xl">
                 Santiago Zapata Ospina
               </h1>
               <p className="mt-5 text-lg">🧑🏻‍💻 Desarrollador Front-End</p>
@@ -93,7 +99,7 @@ function App() {
                 )}
               </button>
             </article>
-            <article className="img-encabezado">
+            <article className="img-encabezado lg:mb-0 sm:mb-10">
               <img
                 src={pfp}
                 alt="Foto de perfil"
@@ -102,7 +108,7 @@ function App() {
             </article>
           </section>
           <hr className="my-10" />
-          <section className="sobre-mi w-[100%] flex flex-col justify-center items-center mt-20 ">
+          <section className="sobre-mi w-full flex flex-col justify-center items-center mt-20 ">
             <h2 className="text-3xl font-bold mx-auto">Sobre mí</h2>
             <p className="flex flex-col justify-center items-center mt-10 bg-white p-6 rounded-xl w-[95%] shadow-md transition-shadow duration-300 hover:shadow-lg">
               Soy una persona apasionada por la tecnología, especialmente la
@@ -112,9 +118,9 @@ function App() {
               habilidades en el mundo del software.
             </p>
           </section>
-          <section className="w-[100%] flex flex-col justify-center mt-20 ">
+          <section className="w-full flex flex-col justify-center mt-20 ">
             <h2 className="text-3xl font-bold mx-auto">Tecnologías</h2>
-            <div className="skills flex flex-wrap justify-evenly gap-4 w-[100%]">
+            <div className="skills flex flex-wrap justify-evenly gap-4 w-full">
               <Habilidades
                 urlImagen={html}
                 nombre="HTML"
@@ -141,9 +147,9 @@ function App() {
               />
             </div>
           </section>
-          <section className="w-[100%] flex flex-col justify-center mt-20">
+          <section className="w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Experiencia</h2>
-            <div className="flex flex-col justify-center items-center gap-4 w-[100%]">
+            <div className="flex flex-col justify-center items-center gap-4 w-full">
               <Experiencia
                 imgEmpresa={domina}
                 nombreEmpresa="Domina Entrega Total S.A.S"
@@ -161,6 +167,7 @@ function App() {
                       donde realicé pruebas manuales y de rendimiento, así como tareas de automatización de pruebas para mejorar 
                       la eficiencia del proceso de aseguramiento de calidad.
                     </p>
+                    <ToggleContent>
                     <p className="mb-4">
                       Utilicé JavaScript y Cypress para automatizar pruebas en las plataformas web de la empresa. Además, integré Python 
                       para la gestión de archivos y datos, y empleé NodeJS para generar reportes automatizados en formato PDF, contribuyendo 
@@ -170,9 +177,9 @@ function App() {
                       Esta experiencia me permitió desarrollar habilidades técnicas y prácticas en la implementación de soluciones que 
                       optimizan los procesos de pruebas y aseguran la calidad de los sistemas.
                     </p>
+                    </ToggleContent>
                   </>
                 }
-                
               />
               <Experiencia
                 imgEmpresa={beautySales}
@@ -185,6 +192,7 @@ function App() {
                     <p className="mb-4">
                       Participé en el desarrollo de un proyecto FullStack junto con un equipo de tres personas, creando un sistema POS para un cliente del sector de salones de belleza y ventas de productos estéticos. El sistema incluye funcionalidades como gestión de ventas, compras, productos, categorías, proveedores, usuarios, roles y un dashboard interactivo.
                     </p>
+                    <ToggleContent>
                     <p className="mb-4">
                       El proyecto se desarrolló utilizando tecnologías modernas como React, Vite, TailwindCSS en el frontend, y NodeJS, ExpressJS, MongoDB en el backend. Implementamos buenas prácticas de desarrollo, incluyendo el uso de tokens para autenticación y encriptación de contraseñas, asegurando la seguridad del sistema.
                     </p>
@@ -194,14 +202,15 @@ function App() {
                     <p className="mb-4">
                       Entre mis aportes más destacados están el desarrollo de los módulos de login, recuperación de contraseña (con envío de códigos de verificación al correo), dashboard, y gestión de usuarios y roles. Además, apoyé a mis compañeros en la creación de otros módulos, contribuyendo al éxito del proyecto en su totalidad.
                     </p>
+                    </ToggleContent>
                   </>
                 }
                 />
             </div>
           </section>
-          <section className="proyectos w-[100%] flex flex-col justify-center mt-20">
+          <section className="proyectos w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Proyectos</h2>
-            <div className="flex flex-wrap items-center gap-4 w-[100%] justify-center">
+            <div className="flex flex-wrap items-center gap-4 w-full justify-center">
               <Proyectos
                 imgProyecto={minimercado}
                 nombreProyecto="Minimercado"
@@ -212,9 +221,9 @@ function App() {
               />
             </div>
           </section>
-          <section className="educacion w-[100%] flex flex-col justify-center mt-20">
+          <section className="educacion w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Estudios</h2>
-            <div className="flex flex-wrap items-center gap-4 w-[100%] justify-center">
+            <div className="flex flex-wrap items-center gap-4 w-full justify-center">
               <Estudios
                 carrera="Tecnología en Análisis y Desarrollo de Software"
                 nombre="SENA: Servicio Nacional de Aprendizaje"
@@ -225,11 +234,11 @@ function App() {
               />
             </div>
           </section>
-          <section className="cursos w-[100%] flex flex-col justify-center mt-20">
+          <section className="cursos w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">
               Cursos y certificaciones
             </h2>
-            <div className="flex flex-wrap items-center gap-4 w-[100%] justify-center">
+            <div className="flex flex-wrap items-center gap-4 w-full justify-center">
             <Estudios
                 carrera="Aprende JavaScript de CERO a EXPERTO"
                 nombre="Udemy"
@@ -254,7 +263,9 @@ function App() {
                 anioComienzo="2023"
                 rutaCertificado="./assets/pdf/Python_esencial.jpg"
               />
-            <Estudios
+              <ToggleContent>
+             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
+             <Estudios
                 carrera="GitHub para programadores"
                 nombre="Linkedin"
                 anioComienzo="2023"
@@ -278,9 +289,11 @@ function App() {
                 anioComienzo="2022"
                 rutaCertificado="./assets/pdf/Desarrollo_agil_de_software.png"
               />
+             </div>
+              </ToggleContent>
             </div>
           </section>
-          <section className="contacto w-[100%] flex flex-col justify-center items-center mt-20">
+          <section className="contacto w-full flex flex-col justify-center items-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Contacto</h2>
             <article className="redes flex justify-center items-center gap-4 mt-10 mb-5">
               <a
@@ -313,7 +326,7 @@ function App() {
               ) : (
                 <span className="flex items-center gap-2"><HiOutlineMail />zapataospinasantiago8@gmail.com</span>
               )}
-            </button>{" "}
+            </button>
           </section>
           <hr className="mt-10" />
         </main>
@@ -328,7 +341,7 @@ function App() {
         {showScrollTop && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-[#a987c9] text-white p-2 rounded-full shadow-lg hover:bg-[#8a6ba7] transition duration-300 z-20"
+            className="fixed lg:bottom-8 lg:right-8 sm:bottom-4 sm:right-4 bg-[#a987c9] text-white p-2 rounded-full shadow-lg hover:bg-[#8a6ba7] transition duration-300 z-20"
             aria-label="Volver arriba"
           >
             <IoIosArrowUp className="w-6 h-6" />
