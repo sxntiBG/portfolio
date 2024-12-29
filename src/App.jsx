@@ -61,8 +61,8 @@ function App() {
       <div className="contenedor  sm:w-[80%] sm:my-20 mx-auto rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0px_6px_15px_rgba(0,0,0,0.3)]">
         <main className="p-4 sm:p-12">
           <section className="encabezado flex flex-col-reverse md:flex-row md:justify-between sm:flex-col-reverse sm:items-center sm:justify-center">
-            <article className="informacion-encabezado w-full flex flex-col justify-center items-center sm:items-left sm:w-[90%]">
-              <h1 className="font-bold w-full text-[20px] sm:text-4xl flex justify-center">
+            <article className="informacion-encabezado w-full flex flex-col justify-start items-center lg:items-start sm:items-left sm:w-[90%] lg:px-4">
+              <h1 className="font-bold w-full text-[20px] sm:text-4xl flex justify-center lg:justify-start">
                 Santiago Zapata Ospina 
               </h1>
               <p className="mt-5 text-lg">🧑🏻‍💻 Desarrollador Front-End</p>
@@ -99,7 +99,7 @@ function App() {
                 )}
               </button>
             </article>
-            <article className="img-encabezado mb-5 lg:mb-0 sm:mb-10 flex justify-center">
+            <article className="img-encabezado mb-5 lg:mb-0 sm:mb-10 flex justify-center lg:px-4">
               <img
                 src={pfp}
                 alt="Foto de perfil"
