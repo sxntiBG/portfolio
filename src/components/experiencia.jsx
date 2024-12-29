@@ -13,11 +13,11 @@ const Experiencia = ({ imgEmpresa, nombreEmpresa, cargo, anioComienzo, anioFinal
     }
 
     return(
-        <div className="flex md:flex-row md:justify-around md:items-start sm:flex-col sm:justify-center sm:items-center mt-10 bg-white p-6 rounded-xl w-[95%] shadow-md transition-shadow duration-300 hover:shadow-lg">
+        <div className="flex md:flex-row md:justify-around md:items-start flex-col justify-center sm:items-center mt-10 bg-white p-6 rounded-xl w-[95%] shadow-md transition-shadow duration-300 hover:shadow-lg">
         <div className="img">
-            <img src={imgEmpresa} alt={nombreEmpresa} className="rounded-lg w-[100px] shadow-md transition-shadow duration-300 hover:shadow-lg sm:mb-5 md:mb-0 lg:mb-0"/>
+            <img src={imgEmpresa} alt={nombreEmpresa} className="rounded-lg w-[100px] mx-auto sm:mx-0 shadow-md transition-shadow duration-300 hover:shadow-lg sm:mb-5 md:mb-0 md:mr-4 lg:mr-0 "/>
         </div>
-            <div className="informacion-empresa w-[80%]">
+            <div className="informacion-empresa mt-5 sm:mt-0 sm:w-[80%]">
             <h2 className="text-xl font-bold text-[#a987c9] mb-2">{cargo}</h2>
             <p className="text-lg font-semibold mb-2">{nombreEmpresa}</p>
             <p className="text-sm text-[#a987c9] mb-4">{fecha()}</p>

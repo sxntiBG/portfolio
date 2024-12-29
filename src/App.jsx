@@ -58,12 +58,12 @@ function App() {
 
   return (
     <>
-      <div className="contenedor  w-[80%] my-20 mx-auto rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0px_6px_15px_rgba(0,0,0,0.3)]">
-        <main className="p-12">
-          <section className="encabezado flex md:flex-row md:justify-between sm:flex-col-reverse sm:items-center sm:justify-center">
-            <article className="informacion-encabezado  w-[90%] flex flex-col justify-center items-left">
-              <h1 className="font-bold w-full text-4xl">
-                Santiago Zapata Ospina
+      <div className="contenedor  sm:w-[80%] sm:my-20 mx-auto rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.2)] transition-shadow duration-300 hover:shadow-[0px_6px_15px_rgba(0,0,0,0.3)]">
+        <main className="p-4 sm:p-12">
+          <section className="encabezado flex flex-col-reverse md:flex-row md:justify-between sm:flex-col-reverse sm:items-center sm:justify-center">
+            <article className="informacion-encabezado w-full bg-blue-100  flex flex-col justify-center items-center sm:items-left sm:w-[90%]">
+              <h1 className="font-bold w-full text-[20px] sm:text-4xl bg-red-100 flex justify-center">
+                Santiago Zapata Ospina 
               </h1>
               <p className="mt-5 text-lg">🧑🏻‍💻 Desarrollador Front-End</p>
               <div className=" flex gap-4 mt-5 items-center">
@@ -95,11 +95,11 @@ function App() {
                     Copiado
                   </span>
                 ) : (
-                  <span className="flex items-center gap-2"><HiOutlineMail />zapataospinasantiago8@gmail.com</span>
+                  <span className="flex items-center gap-2 text-[13px] sm:text-base"><HiOutlineMail />zapataospinasantiago8@gmail.com</span>
                 )}
               </button>
             </article>
-            <article className="img-encabezado lg:mb-0 sm:mb-10">
+            <article className="img-encabezado mb-5 lg:mb-0 sm:mb-10 flex justify-center">
               <img
                 src={pfp}
                 alt="Foto de perfil"
@@ -110,7 +110,7 @@ function App() {
           <hr className="my-10" />
           <section className="sobre-mi w-full flex flex-col justify-center items-center mt-20 ">
             <h2 className="text-3xl font-bold mx-auto">Sobre mí</h2>
-            <p className="flex flex-col justify-center items-center mt-10 bg-white p-6 rounded-xl w-[95%] shadow-md transition-shadow duration-300 hover:shadow-lg">
+            <p className="flex flex-col justify-center items-center mt-10 bg-white p-6 rounded-xl w-full sm:w-[95%] shadow-md transition-shadow duration-300 hover:shadow-lg">
               Soy una persona apasionada por la tecnología, especialmente la
               programación. Actualmente, me desempeño como desarrollador
               front-end, pero estoy abierto a aprender y explorar nuevas áreas,
@@ -331,9 +331,12 @@ function App() {
           <hr className="mt-10" />
         </main>
         <footer className="flex justify-center items-center pb-10">
-          <div className="text-center">
+          <div className="text-center sm:flex">
             <p>
-              &copy; 2025 Santiago Zapata Ospina. Todos los derechos reservados.
+              &copy; 2025 Santiago Zapata Ospina.
+            </p>
+            <p>
+            Todos los derechos reservados.
             </p>
           </div>
         </footer>

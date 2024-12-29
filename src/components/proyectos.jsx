@@ -12,7 +12,7 @@ const Proyectos = ({ imgProyecto, nombreProyecto, descripcion, habilidades, urlR
                 <h2 className="text-xl font-bold ">{nombreProyecto}</h2>
                 <p className="py-2">{descripcion}</p>
             </div>
-            <div className="tecnologias pb-4 pt-2 w-[95%] flex justify-start flex-wrap gap-2 mb-4 pl-4">
+            <div className="tecnologias pb-4 pt-2 w-[95%] flex justify-start flex-wrap gap-2 mb-4 pl-2">
                 {habilidades.map((habilidad, index) => (
                     <span key={index} className="px-2 py-1 bg-[#e3e2e7] text-gray-700 text-sm rounded-full">{habilidad}</span>
                 ))}
