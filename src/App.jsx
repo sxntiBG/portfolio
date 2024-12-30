@@ -255,7 +255,7 @@ function App() {
                 carrera="Introduction to Data Science"
                 nombre="Cisco Networking Academy"
                 anioComienzo="2024"
-                rutaCertificado="./assets/img/certificados/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
+                rutaCertificado="./assets/pdf/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
               />
             <Estudios
                 carrera="Python esencial"
