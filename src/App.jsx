@@ -2,16 +2,18 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 // Imágenes
-import pfp from './assets/img/pfp.jpg';
-import html from './assets/img/tecnologias/HTML.svg';
-import css from './assets/img/tecnologias/CSS.svg';
-import js from './assets/img/tecnologias/JS.svg';
-import react from './assets/img/tecnologias/REACT.svg';
-import git from './assets/img/tecnologias/GIT.svg';
-import github from './assets/img/tecnologias/GITHUB.svg';
-import domina from './assets/img/empresas/domina_entrega_total_sas_logo.jpg';
-import beautySales from './assets/img/empresas/BeautySales.png';
-import minimercado from './assets/img/proyectos/minimercado.png';
+import pfp from "./assets/img/pfp.jpg";
+import html from "./assets/img/tecnologias/HTML.svg";
+import css from "./assets/img/tecnologias/CSS.svg";
+import js from "./assets/img/tecnologias/JS.svg";
+import react from "./assets/img/tecnologias/REACT.svg";
+import python from "./assets/img/tecnologias/PYTHON.svg";
+import git from "./assets/img/tecnologias/GIT.svg";
+import github from "./assets/img/tecnologias/GITHUB.svg";
+import vscode from "./assets/img/tecnologias/VSCODE.svg";
+import domina from "./assets/img/empresas/domina_entrega_total_sas_logo.jpg";
+import beautySales from "./assets/img/empresas/BeautySales.png";
+import minimercado from "./assets/img/proyectos/minimercado.png";
 
 // Componentes
 import Habilidades from "./components/habilidades.jsx";
@@ -19,6 +21,7 @@ import Experiencia from "./components/experiencia.jsx";
 import Proyectos from "./components/proyectos.jsx";
 import Estudios from "./components/estudios.jsx";
 import ToggleContent from "./components/visibilidad.jsx";
+import BotonCV from "./components/botonCV.jsx";
 
 // Iconos
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -53,7 +56,7 @@ function App() {
   };
 
   const toggleVisibility = () => {
-    setIsVisible(!isVisible); 
+    setIsVisible(!isVisible);
   };
 
   return (
@@ -63,12 +66,12 @@ function App() {
           <section className="encabezado flex flex-col-reverse md:flex-row md:justify-between sm:flex-col-reverse sm:items-center sm:justify-center">
             <article className="informacion-encabezado w-full flex flex-col justify-start items-center lg:items-start sm:items-left sm:w-[90%] lg:px-4">
               <h1 className="font-bold w-full text-[20px] sm:text-4xl flex justify-center lg:justify-start">
-                Santiago Zapata Ospina 
+                Santiago Zapata Ospina
               </h1>
               <p className="mt-5 text-lg">🧑🏻‍💻 Desarrollador Front-End</p>
               <div className=" flex gap-4 mt-5 items-center">
-              <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Descargar CV</button>
-              <a
+                <BotonCV />
+                <a
                   href="https://github.com/sxntiBG"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -95,7 +98,10 @@ function App() {
                     Copiado
                   </span>
                 ) : (
-                  <span className="flex items-center gap-2 text-[13px] sm:text-base"><HiOutlineMail />zapataospinasantiago8@gmail.com</span>
+                  <span className="flex items-center gap-2 text-[13px] sm:text-base">
+                    <HiOutlineMail />
+                    zapataospinasantiago8@gmail.com
+                  </span>
                 )}
               </button>
             </article>
@@ -121,30 +127,14 @@ function App() {
           <section className="w-full flex flex-col justify-center mt-20 ">
             <h2 className="text-3xl font-bold mx-auto">Tecnologías</h2>
             <div className="skills flex flex-wrap justify-evenly gap-4 w-full">
-              <Habilidades
-                urlImagen={html}
-                nombre="HTML"
-              />
-              <Habilidades
-                urlImagen={css}
-                nombre="CSS"
-              />
-              <Habilidades
-                urlImagen={js}
-                nombre="JavaScript"
-              />
-              <Habilidades
-                urlImagen={react}
-                nombre="React"
-              />
-              <Habilidades
-                urlImagen={git}
-                nombre="Git"
-              />
-              <Habilidades
-                urlImagen={github}
-                nombre="GitHub"
-              />
+              <Habilidades urlImagen={html} nombre="HTML" />
+              <Habilidades urlImagen={css} nombre="CSS" />
+              <Habilidades urlImagen={js} nombre="JavaScript" />
+              <Habilidades urlImagen={react} nombre="React" />
+              <Habilidades urlImagen={python} nombre="Python" />
+              <Habilidades urlImagen={git} nombre="Git" />
+              <Habilidades urlImagen={github} nombre="GitHub" />
+              <Habilidades urlImagen={vscode} nombre="GitHub" />
             </div>
           </section>
           <section className="w-full flex flex-col justify-center mt-20">
@@ -162,21 +152,29 @@ function App() {
                 descripcion={
                   <>
                     <p className="mb-4">
-                      Durante mis prácticas, participé activamente en el ciclo completo de desarrollo de software, 
-                      enfocándome en la creación de historias de usuario, épicas y manuales técnicos. Formé parte del área de QA, 
-                      donde realicé pruebas manuales y de rendimiento, así como tareas de automatización de pruebas para mejorar 
-                      la eficiencia del proceso de aseguramiento de calidad.
+                      Durante mis prácticas, participé activamente en el ciclo
+                      completo de desarrollo de software, enfocándome en la
+                      creación de historias de usuario, épicas y manuales
+                      técnicos. Formé parte del área de QA, donde realicé
+                      pruebas manuales y de rendimiento, así como tareas de
+                      automatización de pruebas para mejorar la eficiencia del
+                      proceso de aseguramiento de calidad.
                     </p>
                     <ToggleContent>
-                    <p className="mb-4">
-                      Utilicé JavaScript y Cypress para automatizar pruebas en las plataformas web de la empresa. Además, integré Python 
-                      para la gestión de archivos y datos, y empleé NodeJS para generar reportes automatizados en formato PDF, contribuyendo 
-                      a la mejora de los procesos de documentación y validación.
-                    </p>
-                    <p>
-                      Esta experiencia me permitió desarrollar habilidades técnicas y prácticas en la implementación de soluciones que 
-                      optimizan los procesos de pruebas y aseguran la calidad de los sistemas.
-                    </p>
+                      <p className="mb-4">
+                        Utilicé JavaScript y Cypress para automatizar pruebas en
+                        las plataformas web de la empresa. Además, integré
+                        Python para la gestión de archivos y datos, y empleé
+                        NodeJS para generar reportes automatizados en formato
+                        PDF, contribuyendo a la mejora de los procesos de
+                        documentación y validación.
+                      </p>
+                      <p>
+                        Esta experiencia me permitió desarrollar habilidades
+                        técnicas y prácticas en la implementación de soluciones
+                        que optimizan los procesos de pruebas y aseguran la
+                        calidad de los sistemas.
+                      </p>
                     </ToggleContent>
                   </>
                 }
@@ -186,26 +184,53 @@ function App() {
                 nombreEmpresa="Beauty Sales"
                 cargo="Sistema POS - Freelance"
                 anioComienzo="2024"
-                habilidades={["React", "Vite", "Tailwind CSS", "NodeJS", "ExpressJS", "MongoDB"]}
+                habilidades={[
+                  "React",
+                  "Vite",
+                  "Tailwind CSS",
+                  "NodeJS",
+                  "ExpressJS",
+                  "MongoDB",
+                ]}
                 descripcion={
                   <>
                     <p className="mb-4">
-                      Participé en el desarrollo de un proyecto FullStack junto con un equipo de tres personas, creando un sistema POS para un cliente del sector de salones de belleza y ventas de productos estéticos. El sistema incluye funcionalidades como gestión de ventas, compras, productos, categorías, proveedores, usuarios, roles y un dashboard interactivo.
+                      Participé en el desarrollo de un proyecto FullStack junto
+                      con un equipo de tres personas, creando un sistema POS
+                      para un cliente del sector de salones de belleza y ventas
+                      de productos estéticos. El sistema incluye funcionalidades
+                      como gestión de ventas, compras, productos, categorías,
+                      proveedores, usuarios, roles y un dashboard interactivo.
                     </p>
                     <ToggleContent>
-                    <p className="mb-4">
-                      El proyecto se desarrolló utilizando tecnologías modernas como React, Vite, TailwindCSS en el frontend, y NodeJS, ExpressJS, MongoDB en el backend. Implementamos buenas prácticas de desarrollo, incluyendo el uso de tokens para autenticación y encriptación de contraseñas, asegurando la seguridad del sistema.
-                    </p>
-                    <p className="mb-4">
-                      Mi principal responsabilidad fue liderar el desarrollo del frontend, diseñando y construyendo la mayor parte visual del sistema y los componentes principales. También consumí las APIs, que en varios casos desarrollé personalmente, y gestioné la seguridad del sistema mediante la implementación de tokens.
-                    </p>
-                    <p className="mb-4">
-                      Entre mis aportes más destacados están el desarrollo de los módulos de login, recuperación de contraseña (con envío de códigos de verificación al correo), dashboard, y gestión de usuarios y roles. Además, apoyé a mis compañeros en la creación de otros módulos, contribuyendo al éxito del proyecto en su totalidad.
-                    </p>
+                      <p className="mb-4">
+                        El proyecto se desarrolló utilizando tecnologías
+                        modernas como React, Vite, TailwindCSS en el frontend, y
+                        NodeJS, ExpressJS, MongoDB en el backend. Implementamos
+                        buenas prácticas de desarrollo, incluyendo el uso de
+                        tokens para autenticación y encriptación de contraseñas,
+                        asegurando la seguridad del sistema.
+                      </p>
+                      <p className="mb-4">
+                        Mi principal responsabilidad fue liderar el desarrollo
+                        del frontend, diseñando y construyendo la mayor parte
+                        visual del sistema y los componentes principales.
+                        También consumí las APIs, que en varios casos desarrollé
+                        personalmente, y gestioné la seguridad del sistema
+                        mediante la implementación de tokens.
+                      </p>
+                      <p className="mb-4">
+                        Entre mis aportes más destacados están el desarrollo de
+                        los módulos de login, recuperación de contraseña (con
+                        envío de códigos de verificación al correo), dashboard,
+                        y gestión de usuarios y roles. Además, apoyé a mis
+                        compañeros en la creación de otros módulos,
+                        contribuyendo al éxito del proyecto en su totalidad.
+                      </p>
                     </ToggleContent>
                   </>
                 }
-                />
+              />
             </div>
           </section>
           <section className="proyectos w-full flex flex-col justify-center mt-20">
@@ -239,57 +264,63 @@ function App() {
               Cursos y certificaciones
             </h2>
             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
-            <Estudios
+              <Estudios
+                carrera="Desarrollo Personal G8 - ONE"
+                nombre="Alura"
+                anioComienzo="2025"
+                rutaCertificado="./assets/pdf/Desarrollo_Personal_G8_ONE.pdf"
+              />
+              <Estudios
                 carrera="Aprende JavaScript de CERO a EXPERTO"
                 nombre="Udemy"
                 anioComienzo="2024"
                 rutaCertificado="./assets/img/certificados/Aprende_Javascript_de_cero_a_experto.jpg"
               />
-            <Estudios
+              <Estudios
                 carrera="Fundamentos esenciales de la programación"
                 nombre="Linkedin"
                 anioComienzo="2024"
                 rutaCertificado="./assets/img/certificados/Fundamentos_esenciales_de_la_programacion.jpg"
               />
-            <Estudios
+              <Estudios
                 carrera="Introduction to Data Science"
                 nombre="Cisco Networking Academy"
                 anioComienzo="2024"
                 rutaCertificado="./assets/pdf/Introduction_to_Data_Science_Badge20240403-29-n2modh.pdf"
               />
-            <Estudios
-                carrera="Python esencial"
-                nombre="Linkedin"
-                anioComienzo="2023"
-                rutaCertificado="./assets/img/certificados/Python_esencial.jpg"
-              />
               <ToggleContent>
-             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
-             <Estudios
-                carrera="GitHub para programadores"
-                nombre="Linkedin"
-                anioComienzo="2023"
-                rutaCertificado="./assets/img/certificados/GitHub_para_programadores.jpg"
-              />
-            <Estudios
-                carrera="HTML esencial"
-                nombre="Linkedin"
-                anioComienzo="2023"
-                rutaCertificado="./assets/img/certificados/HTML_esencial.jpg"
-              />
-            <Estudios
-                carrera="CSS esencial"
-                nombre="Linkedin"
-                anioComienzo="2022"
-                rutaCertificado="./assets/img/certificados/CSS_esencial.png"
-              />
-              <Estudios
-                carrera="Desarrollo ágil de software"
-                nombre="Linkedin"
-                anioComienzo="2022"
-                rutaCertificado="./assets/img/certificados/Desarrollo_agil_de_software.png"
-              />
-             </div>
+                <div className="flex flex-wrap items-center gap-4 w-full justify-center">
+                  <Estudios
+                    carrera="Python esencial"
+                    nombre="Linkedin"
+                    anioComienzo="2023"
+                    rutaCertificado="./assets/img/certificados/Python_esencial.jpg"
+                  />
+                  <Estudios
+                    carrera="GitHub para programadores"
+                    nombre="Linkedin"
+                    anioComienzo="2023"
+                    rutaCertificado="./assets/img/certificados/GitHub_para_programadores.jpg"
+                  />
+                  <Estudios
+                    carrera="HTML esencial"
+                    nombre="Linkedin"
+                    anioComienzo="2023"
+                    rutaCertificado="./assets/img/certificados/HTML_esencial.jpg"
+                  />
+                  <Estudios
+                    carrera="CSS esencial"
+                    nombre="Linkedin"
+                    anioComienzo="2022"
+                    rutaCertificado="./assets/img/certificados/CSS_esencial.png"
+                  />
+                  <Estudios
+                    carrera="Desarrollo ágil de software"
+                    nombre="Linkedin"
+                    anioComienzo="2022"
+                    rutaCertificado="./assets/img/certificados/Desarrollo_agil_de_software.png"
+                  />
+                </div>
               </ToggleContent>
             </div>
           </section>
@@ -313,7 +344,7 @@ function App() {
                 <SlSocialLinkedin className="w-8 h-8" />
               </a>
             </article>
-            <button className="bg-[#a987c9] text-white px-8 py-2 rounded-full mb-2 transition-transform transform hover:font-bold hover:scale-105 hover:bg-[#915bb8] duration-300 ease-in-out flex items-center gap-2"> <LuDownload className="text-white"/>Descargar CV</button>
+            <BotonCV />
             <button
               onClick={copyEmail}
               className="hover:text-[#a987c9] focus:outline-none"
@@ -324,7 +355,10 @@ function App() {
                   Copiado
                 </span>
               ) : (
-                <span className="flex items-center gap-2"><HiOutlineMail />zapataospinasantiago8@gmail.com</span>
+                <span className="flex items-center gap-2">
+                  <HiOutlineMail />
+                  zapataospinasantiago8@gmail.com
+                </span>
               )}
             </button>
           </section>
@@ -332,12 +366,8 @@ function App() {
         </main>
         <footer className="flex justify-center items-center pb-10">
           <div className="text-center sm:flex">
-            <p>
-              &copy; 2025 Santiago Zapata Ospina.
-            </p>
-            <p>
-            Todos los derechos reservados.
-            </p>
+            <p>&copy; 2025 Santiago Zapata Ospina.</p>
+            <p>Todos los derechos reservados.</p>
           </div>
         </footer>
 
