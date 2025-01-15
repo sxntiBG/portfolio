@@ -5,7 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const Proyectos = ({ imgProyecto, nombreProyecto, descripcion, habilidades, urlRepositorio, urlDemo }) =>{
     return(
         <div className="card flex flex-col justify-center items-center mt-10 bg-white rounded-xl lg:w-[46.5%] shadow-md transition-shadow duration-300 hover:shadow-lg">
-            <div className="img bg-red-100 w-[95%] rounded-t-3xl">
+            <div className="img bg-red-100 w-full rounded-t-3xl">
                 <img src={imgProyecto} alt="Proyecto 1" className="w-[100%] rounded-t-xl"/>
             </div>
             <div className="body-card px-4 pt-4">
