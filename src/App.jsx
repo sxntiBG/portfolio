@@ -12,7 +12,8 @@ import git from "./assets/img/tecnologias/GIT.svg";
 import github from "./assets/img/tecnologias/GITHUB.svg";
 import vscode from "./assets/img/tecnologias/VSCODE.svg";
 import domina from "./assets/img/empresas/domina_entrega_total_sas_logo.jpg";
-import beautySales from "./assets/img/empresas/BeautySales.png";
+import beautySales from "./assets/img/proyectos/beautysales.png";
+import eltallerdelucerito from "./assets/img/proyectos/eltallerdelucerito.png";
 import minimercado from "./assets/img/proyectos/minimercado.png";
 
 // Componentes
@@ -179,67 +180,30 @@ function App() {
                   </>
                 }
               />
-              <Experiencia
-                imgEmpresa={beautySales}
-                nombreEmpresa="Beauty Sales"
-                cargo="Sistema POS - Freelance"
-                anioComienzo="2024"
-                habilidades={[
-                  "React",
-                  "Vite",
-                  "Tailwind CSS",
-                  "NodeJS",
-                  "ExpressJS",
-                  "MongoDB",
-                ]}
-                descripcion={
-                  <>
-                    <p className="mb-4">
-                      Participé en el desarrollo de un proyecto FullStack junto
-                      con un equipo de tres personas, creando un sistema POS
-                      para un cliente del sector de salones de belleza y ventas
-                      de productos estéticos. El sistema incluye funcionalidades
-                      como gestión de ventas, compras, productos, categorías,
-                      proveedores, usuarios, roles y un dashboard interactivo.
-                    </p>
-                    <ToggleContent>
-                      <p className="mb-4">
-                        El proyecto se desarrolló utilizando tecnologías
-                        modernas como React, Vite, TailwindCSS en el frontend, y
-                        NodeJS, ExpressJS, MongoDB en el backend. Implementamos
-                        buenas prácticas de desarrollo, incluyendo el uso de
-                        tokens para autenticación y encriptación de contraseñas,
-                        asegurando la seguridad del sistema.
-                      </p>
-                      <p className="mb-4">
-                        Mi principal responsabilidad fue liderar el desarrollo
-                        del frontend, diseñando y construyendo la mayor parte
-                        visual del sistema y los componentes principales.
-                        También consumí las APIs, que en varios casos desarrollé
-                        personalmente, y gestioné la seguridad del sistema
-                        mediante la implementación de tokens.
-                      </p>
-                      <p className="mb-4">
-                        Entre mis aportes más destacados están el desarrollo de
-                        los módulos de login, recuperación de contraseña (con
-                        envío de códigos de verificación al correo), dashboard,
-                        y gestión de usuarios y roles. Además, apoyé a mis
-                        compañeros en la creación de otros módulos,
-                        contribuyendo al éxito del proyecto en su totalidad.
-                      </p>
-                    </ToggleContent>
-                  </>
-                }
-              />
             </div>
           </section>
-          <section className="proyectos w-full flex flex-col justify-center mt-20">
+          <section className="proyectos w-full flex flex-col justify-center mt-20 ">
             <h2 className="text-3xl font-bold mx-auto">Proyectos</h2>
             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
+            <Proyectos
+                imgProyecto={beautySales}
+                nombreProyecto="Beauty Sales"
+                descripcion="Sistema POS para Salones de Belleza Desarrollé junto a un equipo un sistema POS para gestionar ventas, compras y usuarios en el sector de la belleza. Me encargué del frontend, diseñando la interfaz, consumiendo APIs y asegurando la autenticación con tokens. También implementé la recuperación de contraseña y la gestión de roles, contribuyendo a un sistema seguro y funcional."
+                habilidades={["React", "Vite", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "Git", "GitHub"]}
+                urlDemo="https://beautysales-sandy.vercel.app/login"
+              />
+              <Proyectos
+                imgProyecto={eltallerdelucerito}
+                nombreProyecto="El taller de Lucerito"
+                descripcion="Diseñé y desarrollé una landing page para una tienda de materiales educativos artesanales, destacando su misión de fomentar el aprendizaje infantil y apoyar a mujeres de bajos recursos con empleo digno. Me enfoqué en una interfaz atractiva y funcional para transmitir el valor del proyecto y mejorar la experiencia del usuario."
+                habilidades={["HTML", "CSS", "JavaScript"]}
+                urlRepositorio="https://github.com/sxntiBG/eltallerdelucerito"
+                urlDemo="https://sxntibg.github.io/eltallerdelucerito/"
+              />
               <Proyectos
                 imgProyecto={minimercado}
                 nombreProyecto="Minimercado"
-                descripcion="Este es un proyecto interactivo de Minimercado hecho con que simula una aplicación básica para la selección de productos, cálculo de totales y manejo del pago y cambio del cliente."
+                descripcion="Este proyecto simula una aplicación básica de minimercado, permitiendo a los usuarios seleccionar productos, calcular el total de la compra y gestionar el pago y el cambio de manera interactiva. Su objetivo es representar de forma sencilla el funcionamiento de un punto de venta, brindando una experiencia intuitiva y práctica para el usuario."
                 habilidades={["HTML", "CSS", "JavaScript"]}
                 urlRepositorio="https://github.com/sxntiBG/minimercado"
                 urlDemo="https://sxntibg.github.io/minimercado/"
@@ -249,6 +213,13 @@ function App() {
           <section className="educacion w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Estudios</h2>
             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
+            <Estudios
+                carrera="Ingeniería de sistemas"
+                nombre="ITM"
+                anioComienzo="2025"
+                mesComienzo="Febrero"
+                anioFinal="Actualidad"
+              />
               <Estudios
                 carrera="Tecnología en Análisis y Desarrollo de Software"
                 nombre="SENA: Servicio Nacional de Aprendizaje"
@@ -365,7 +336,7 @@ function App() {
           <hr className="mt-10" />
         </main>
         <footer className="flex justify-center items-center pb-10">
-          <div className="text-center sm:flex">
+          <div className="text-center sm:flex gap-2">
             <p>&copy; 2025 Santiago Zapata Ospina.</p>
             <p>Todos los derechos reservados.</p>
           </div>
