@@ -17,7 +17,7 @@ const Proyectos = ({ imgProyecto, nombreProyecto, descripcion, habilidades, urlR
 
     return (
         <div className="card flex flex-col  items-center mt-10  rounded-xl h-[650px] bg-white lg:w-[46.5%] shadow-md transition-shadow duration-300 hover:shadow-lg ">
-            <div className="img bg-red-100 w-full rounded-t-3xl h-[250px]">
+            <div className="img bg-red-100 w-full rounded-t-3xl h-[350px]">
                 <img src={imgProyecto} alt="Proyecto 1" className="w-[100%] rounded-t-xl h-full" />
             </div>
             <div className="body-card px-4 pt-4 h-[250px]">
