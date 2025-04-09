@@ -213,13 +213,6 @@ function App() {
           <section className="educacion w-full flex flex-col justify-center mt-20">
             <h2 className="text-3xl font-bold mx-auto">Estudios</h2>
             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
-            <Estudios
-                carrera="Ingeniería de sistemas"
-                nombre="ITM"
-                anioComienzo="2025"
-                mesComienzo="Febrero"
-                anioFinal="Actualidad"
-              />
               <Estudios
                 carrera="Tecnología en Análisis y Desarrollo de Software"
                 nombre="SENA: Servicio Nacional de Aprendizaje"
