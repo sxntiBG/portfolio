@@ -12,6 +12,7 @@ import git from "./assets/img/tecnologias/GIT.svg";
 import github from "./assets/img/tecnologias/GITHUB.svg";
 import vscode from "./assets/img/tecnologias/VSCODE.svg";
 import domina from "./assets/img/empresas/domina_entrega_total_sas_logo.jpg";
+import elsabordelcambio from "./assets/img/proyectos/elsabordelcambio.png";
 import beautySales from "./assets/img/proyectos/beautysales.png";
 import eltallerdelucerito from "./assets/img/proyectos/eltallerdelucerito.png";
 import minimercado from "./assets/img/proyectos/minimercado.png";
@@ -186,10 +187,30 @@ function App() {
             <h2 className="text-3xl font-bold mx-auto">Proyectos</h2>
             <div className="flex flex-wrap items-center gap-4 w-full justify-center">
             <Proyectos
+                imgProyecto={elsabordelcambio}
+                nombreProyecto="El sabor del cambio"
+                descripcion="El Sabor del Cambio es un blog moderno y visualmente vibrante para instructoras infantiles. Su objetivo es ofrecer ideas y recursos para fomentar hábitos de alimentación saludable en los niños y niñas de los jardines infantiles, presentado de forma colorida y atractiva."
+                habilidades={[
+                  "HTML",
+                  "CSS"
+                ]}
+                urlRepositorio="https://github.com/sxntiBG/ElSaborDelCambio"
+                urlDemo="https://sxntibg.github.io/ElSaborDelCambio/"
+              />
+              <Proyectos
                 imgProyecto={beautySales}
                 nombreProyecto="Beauty Sales"
                 descripcion="Sistema POS para Salones de Belleza Desarrollé junto a un equipo un sistema POS para gestionar ventas, compras y usuarios en el sector de la belleza. Me encargué del frontend, diseñando la interfaz, consumiendo APIs y asegurando la autenticación con tokens. También implementé la recuperación de contraseña y la gestión de roles, contribuyendo a un sistema seguro y funcional."
-                habilidades={["React", "Vite", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "Git", "GitHub"]}
+                habilidades={[
+                  "React",
+                  "Vite",
+                  "TailwindCSS",
+                  "Node.js",
+                  "Express.js",
+                  "MongoDB",
+                  "Git",
+                  "GitHub",
+                ]}
                 urlDemo="https://beautysales-sandy.vercel.app/login"
               />
               <Proyectos
